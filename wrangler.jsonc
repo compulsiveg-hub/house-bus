@@ -1,0 +1,11 @@
+{
+  // House Bus: one Worker plus one D1 database. The Deploy to Cloudflare button creates both.
+  "name": "house-bus",
+  "main": "src/index.js",
+  "compatibility_date": "2026-06-01",
+  "d1_databases": [
+    { "binding": "DB", "database_name": "house-bus","database_id": "6ae29297-c734-414e-9064-5324ceba0a0d" }
+  ],
+  // Keep the PASSCODE secret and any dashboard settings when the Worker redeploys.
+  "keep_vars": true
+}

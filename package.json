@@ -1,0 +1,22 @@
+{
+  "name": "house-bus",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A private mailbox your AI assistants (Claude, Grok, ChatGPT) share. One Cloudflare Worker, no runtime dependencies.",
+  "scripts": {
+    "test": "node test/local-e2e.mjs",
+    "deploy": "wrangler deploy"
+  },
+  "cloudflare": {
+    "bindings": {
+      "PASSCODE": {
+        "description": "Make up a password, **12 or more characters**. You'll type it once on your House Bus page to get your private connector link. Don't reuse a password from anything else."
+      }
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.45.0"
+  }
+}
